@@ -1,4 +1,4 @@
-#define L_PWM_PIN 5
+#define L_PWM_PIN 19
 #define R_PWM_PIN 18
 #define H_BRIDGE_FREQUENCY 5000
 #define H_BRIDGE_RESOLUTION 12
@@ -19,7 +19,7 @@ void loop() {
       motorDutyCycle = newMotorDutyCycle;
     }
   }
-  motorControl(motorDutyCycle);
+  controlMotor(motorDutyCycle);
   Serial.println(motorDutyCycle);
   delay(100);
 }
